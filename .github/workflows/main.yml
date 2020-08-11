@@ -30,4 +30,4 @@ jobs:
       uses: Azure/cli@v1.0.0
       with:
         inlineScript: |
-          Start-AzVM -ResourceGroupName "remote-coding-dojo-rg" -Name "remote-coding-dojo-vm"
+          az vm start -g remote-coding-dojo-rg -n remote-coding-dojo-vm
