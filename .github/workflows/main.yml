@@ -20,12 +20,11 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    
     - name: Azure Login
-      uses: Azure/login@v1.1
+      uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
-        # Set this value to true to enable Azure PowerShell Login in addition to Az CLI login
-        enable-AzPSSession: true 
         
     - name: Azure CLI Action
       uses: Azure/cli@v1.0.0
